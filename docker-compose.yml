@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  py:
+    # image: py2.7-dev:latest
+    image: my-py2.7-dev:latest
+    container_name: py2.7
+    tty: true
+    ports:
+      - "8787:8787"
+      - "2222:22"
+    working_dir: /srv
+    volumes:
+      - ./code:/srv

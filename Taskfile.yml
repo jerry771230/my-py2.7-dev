@@ -1,0 +1,41 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build "py2.7-dev" image
+    cmds:
+      - docker build -t py2.7-dev .
+
+  down:
+    desc: Remove containers
+    cmds:
+      - docker-compose down
+
+  up:
+    desc: Run containers
+    cmds:
+      - docker-compose up -d
+
+  exec:
+    desc: Get into "py2.7" container
+    cmds:
+      - docker exec -ti py2.7 /bin/bash
+  stop:
+    desc: Stop containers
+    cmds:
+      - docker-compose stop
+
+  start:
+    desc: Start containers
+    cmds:
+      - docker-compose start
+
+  restart:
+    desc: Restart containers
+    cmds:
+      - docker-compose restart
+
+  login:
+    desc: SSH to "py2.7" container
+    cmds:
+      - ssh -p 2222 -t root@127.0.0.1 'cd /srv ; bash'

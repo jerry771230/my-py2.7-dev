@@ -1,0 +1,16 @@
+Flask
+flask_restful
+flask-httpauth==4.5.0
+zerorpc
+urllib3
+strgen
+requests
+psycopg2-binary
+flask_sqlalchemy
+bcrypt
+ping
+psutil
+pyjwt
+pyOpenSSL
+python-dateutil
+flask-migrate
